@@ -1,4 +1,4 @@
-# @wecoder/fe-utils
+# @fallen_leaves/fe-utils
 
 前端通用工具库
 
@@ -8,20 +8,20 @@
 
 ## 安装
 ```bash
-  npm install --save @wecoder/fe-utils
+  npm install --save @fallen_leaves/fe-utils
   # or
-  yarn add @wecoder/fe-utils
+  yarn add @fallen_leaves/fe-utils
 ```
 ## 使用
 ```bash
   # 完整导入
-  import FeUtils from '@wecoder/fe-utils'
+  import FeUtils from '@fallen_leaves/fe-utils'
 
   FeUtils.getCookie('user_id')
   # or
 
   # 模块导入
-  import { getCookie } from '@wecoder/fe-utils'
+  import { getCookie } from '@fallen_leaves/fe-utils'
 
   getCookie('user_id')
 ```
