@@ -1,6 +1,6 @@
 {
-	"name": "@wecoder/fe-utils",
-	"version": "1.0.0",
+	"name": "@fallen_leaves/fe-utils",
+	"version": "1.0.1",
 	"description": "工具函数库",
 	"main": "dist/fe-utils.umd.js",
 	"module": "dist/fe-utils.esm.js",
@@ -29,6 +29,10 @@
 	"author": {
     "name": "fallen_leaves",
     "url": "https://gitee.com/we_coder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/we_coder/fe-utils"
   },
 	"license": "ISC",
 	"devDependencies": {
