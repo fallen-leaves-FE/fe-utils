@@ -8,21 +8,21 @@ interface ObjectTypes <T = any> {
  * @param name 要获取的参数名称, 非必传
  * @returns 返回值，如果name不为空则返回name的值，否则返回一个包含所有参数键值对的对象
  */
-declare const getUrlParams: (url: string = window.location.href, name?: string) => string | ObjectTypes<string>
+export declare const getUrlParams: (url: string = window.location.href, name?: string) => string | ObjectTypes<string>
 
 /**
  * @description 格式化 queryString 为对象
  * @param queryString query字符串 例如：?name=Bob&age=24 或者 name=Bob&age=24
  * @returns 返回值 例如：{ name: 'Bob', age: '24' }
  */
-declare const parseQuery: (queryString: string) => ObjectTypes<string>
+export declare const parseQuery: (queryString: string) => ObjectTypes<string>
 
 /**
  * @description 格式化对象为queryString
  * @param query query对象 例如：{ name: 'Bob', age: 24 }
  * @returns queryString 例如：'name=Bob&age=24'
  */
-declare const stringifyQuery: (query: ObjectTypes = {}, needEncodeURIComponent = true) => string
+export declare const stringifyQuery: (query: ObjectTypes = {}, needEncodeURIComponent = true) => string
 
 /**
  * @description 删除url中指定名称的query参数
@@ -30,7 +30,7 @@ declare const stringifyQuery: (query: ObjectTypes = {}, needEncodeURIComponent =
  * @param keys 要删除的query参数，例如：deleteUrlParams('name') 或者 deleteUrlParams(['name', 'age'])
  * @returns 返回删除目标query参数后的字符串
  */
-declare const deleteUrlParams: (url: string = window.location.href, keys: string[] | string = []) => string
+export declare const deleteUrlParams: (url: string = window.location.href, keys: string[] | string = []) => string
 
 /**
  * @description 时间格式化函数
@@ -38,14 +38,14 @@ declare const deleteUrlParams: (url: string = window.location.href, keys: string
  * @param fmt 格式化模板 例如：'yyyy-MM-dd HH:mm:ss'
  * @returns 时间格式化字符串 '2021-10-01 08:00:00'
  */
-declare const formatFixedDate: (date: Date | number, fmt: string) => string
+export declare const formatFixedDate: (date: Date | number, fmt: string) => string
 
 /**
  * @description 格式化${startTime}距现在的已过时间
  * @param  {Date} startTime 时间对象或者时间戳
  * @returns {String} 例如 '刚刚'，'3分钟前'，'1小时前'
  */
-declare const formatPassTime: (startTime: Date | number = new Date()) => string
+export declare const formatPassTime: (startTime: Date | number = new Date()) => string
 
 /**
  * @description 字符串中的url替换为<a>标签
@@ -53,28 +53,28 @@ declare const formatPassTime: (startTime: Date | number = new Date()) => string
  * @param className <a>标签的class名称
  * @returns {String} 替换后的html字符串
  */
-declare const urlToLink: (url: string, className = '') => string
+export declare const urlToLink: (url: string, className = '') => string
 
 /**
  * @description 深拷贝
  * @param source 要拷贝的对象
  * @returns 返回值
  */
-declare const deepClone: (source: any) => any
+export declare const deepClone: (source: any) => any
 
 /**
  * @description 判断空对象
  * @param source 目标对象
  * @returns {Boolean}
  */
-declare const isEmpty: (source: any) => boolean
+export declare const isEmpty: (source: any) => boolean
 
 /**
  * @description 小写数字转大写金额
  * @param num 金额数字 例如：1000
  * @returns 转换后的大写金额 例如：壹仟
  */
-declare const digitUppercase: (num: number) => string
+export declare const digitUppercase: (num: number) => string
 
 /**
  * @description 数字转千分位
@@ -82,14 +82,14 @@ declare const digitUppercase: (num: number) => string
  * @param {Number} fixed 浮点数精度
  * @returns {String} 返回值
  */
-declare const fixedThousandsNumber: (num: number | string, fixed = 0) => string
+export declare const fixedThousandsNumber: (num: number | string, fixed = 0) => string
 
 /**
  * @description 格式化文件大小
  * @param size 文件大小
  * @returns 返回 10KB, 10MB, 10GB
  */
-declare const formatFileFize: (size: number) => string
+export declare const formatFileFize: (size: number) => string
 
 /**
  * @description 函数防抖
@@ -97,14 +97,14 @@ declare const formatFileFize: (size: number) => string
  * @param wait 延迟执行毫秒数
  * @param immediate true 表立即执行，false 表非立即执行
  */
-declare function debounce (fn: Function, wait: number, immediate = false): Function
+export declare function debounce (fn: Function, wait: number, immediate = false): Function
 
 /**
  * @description 节流函数
  * @param fn 要节流的方法
  * @param wait 节流间隔时间(毫秒)
  */
-declare function throttle (fn: Function, wait: number): Function
+export declare function throttle (fn: Function, wait: number): Function
 
 type ExploreName = 'IE' | 'Edge' | 'Firefox' | 'Chrome' | 'Opera' | 'Safari' | 'Unkonwn'
 interface ExploreProps {
@@ -115,14 +115,14 @@ interface ExploreProps {
  * @description 获取浏览器平台及版本
  * @returns {Object} 返回浏览器平台和版本
  */
-declare const getExplore: () => ExploreProps
+export declare const getExplore: () => ExploreProps
 
 type OSType = 'ios' | 'Android' | 'WindowsPhone' | 'MacOS' | 'Windows' | 'Linux' | 'Unkonwn'
 /**
  * @description 获取系统类型
  * @returns 系统标识 'ios' | 'Android' | 'WindowsPhone' | 'MacOS' | 'Windows' | 'Linux' | 'Unkonwn'
  */
-declare const getOS: () => OSType
+export declare const getOS: () => OSType
 
 /**
  * @name getCookie
@@ -130,7 +130,7 @@ declare const getOS: () => OSType
  * @param {String} name cookie名称
  * @returns {Object|String} 返回值name的cookie值，若name为空则返回所有cookie
  */
-declare const getCookie: (name?: string) => ObjectTypes<string> | string
+export declare const getCookie: (name?: string) => ObjectTypes<string> | string
 
 interface SetCookieOpt {
 	// 过期时间
@@ -149,7 +149,7 @@ interface SetCookieOpt {
  * @returns {void} 返回值
  */
 
-declare const setCookie: (
+export declare const setCookie: (
   name: string,
   value: string,
   {
@@ -164,9 +164,18 @@ declare const setCookie: (
  * @param name cookie名称
  * @returns 返回值
  */
-declare const removeCookie: (name: string) => void
+export declare const removeCookie: (name: string) => void
+
+/**
+ * @description 版本号比较大小
+ * @param version1 版本号1
+ * @param version2 版本号2
+ * @returns 比较的结果 -1 | 0 | 1 分别标识小于|等于|大于
+ */
+export declare const versionCompare: (version1: string | number, version2: string | number) => number | undefined
 
 interface RegexpCollection {
+  readonly ua: string
   readonly isUrlReg: RegExp
   readonly isPhoneNumberReg: RegExp
   readonly isEmailReg: RegExp
@@ -282,3 +291,5 @@ interface RegexpCollection {
    */
   isWeChat (): boolean
 }
+
+export declare const RegCollection: RegexpCollection
