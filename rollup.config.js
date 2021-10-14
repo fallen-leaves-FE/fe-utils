@@ -1,6 +1,6 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
-import esbuild from 'rollup-plugin-esbuild'
+import typescript from 'rollup-plugin-typescript2'
 import modulesMaps from './modules.json'
 import path from 'path'
 
@@ -13,12 +13,7 @@ const plugins = [
     main: true,
     extensions: ['.js', '.ts', '.json']
   }),
-  esbuild({
-    include: /\.[jt]s$/, // default, inferred from `loaders` option
-    exclude: /node_modules/, // default
-    sourceMap: true,
-    minify: false,
-    target: 'esnext',
+  typescript({
     tsconfig: 'tsconfig.json'
   }),
   commonjs({

@@ -1,3 +1,4 @@
+import { ObjectTypes } from './../../types/index.d'
 /**
  * @description 格式化对象为queryString
  * @param query query对象 例如：{ name: 'Bob', age: 24 }

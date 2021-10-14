@@ -1,3 +1,4 @@
+import { SetCookieOpt } from './../../types/index.d'
 /**
  * @name setCookie
  * @description 设置cookie

@@ -1,3 +1,4 @@
+import { ObjectTypes } from './../../types/index.d'
 /**
  * @name getCookie
  * @description 获取cookie

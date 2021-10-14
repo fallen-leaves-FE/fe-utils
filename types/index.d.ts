@@ -1,4 +1,4 @@
-interface ObjectTypes <T = any> {
+export interface ObjectTypes <T = any> {
 	[propsName: string]: T
 }
 
@@ -106,8 +106,8 @@ export declare function debounce (fn: Function, wait: number, immediate = false)
  */
 export declare function throttle (fn: Function, wait: number): Function
 
-type ExploreName = 'IE' | 'Edge' | 'Firefox' | 'Chrome' | 'Opera' | 'Safari' | 'Unkonwn'
-interface ExploreProps {
+export type ExploreName = 'IE' | 'Edge' | 'Firefox' | 'Chrome' | 'Opera' | 'Safari' | 'Unkonwn'
+export interface ExploreProps {
   platform: ExploreName
   version: string
 }
@@ -117,7 +117,7 @@ interface ExploreProps {
  */
 export declare const getExplore: () => ExploreProps
 
-type OSType = 'ios' | 'Android' | 'WindowsPhone' | 'MacOS' | 'Windows' | 'Linux' | 'Unkonwn'
+export type OSType = 'ios' | 'Android' | 'WindowsPhone' | 'MacOS' | 'Windows' | 'Linux' | 'Unkonwn'
 /**
  * @description 获取系统类型
  * @returns 系统标识 'ios' | 'Android' | 'WindowsPhone' | 'MacOS' | 'Windows' | 'Linux' | 'Unkonwn'
@@ -132,7 +132,7 @@ export declare const getOS: () => OSType
  */
 export declare const getCookie: (name?: string) => ObjectTypes<string> | string
 
-interface SetCookieOpt {
+export interface SetCookieOpt {
 	// 过期时间
 	expirse?: number
 	// 二级域名
@@ -174,7 +174,7 @@ export declare const removeCookie: (name: string) => void
  */
 export declare const versionCompare: (version1: string | number, version2: string | number) => number | undefined
 
-interface RegexpCollection {
+export interface RegexpCollection {
   readonly ua: string
   readonly isUrlReg: RegExp
   readonly isPhoneNumberReg: RegExp

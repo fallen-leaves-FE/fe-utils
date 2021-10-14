@@ -8,7 +8,7 @@ function debounce (fn: Function, wait: number, immediate = false): Function {
   let timeout: number | null
 
   return function (...args:any[]) {
-    const context = this
+    const context: any = this
     if (timeout) {
       clearTimeout(timeout)
     }

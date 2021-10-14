@@ -1,3 +1,4 @@
+import { ObjectTypes } from './../../types/index.d'
 /**
  * @description 获取url中的query参数
  * @param url 目标地址，默认：当前地址栏url
