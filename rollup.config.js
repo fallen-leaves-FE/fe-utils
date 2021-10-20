@@ -1,6 +1,8 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
+import progress from 'rollup-plugin-progress'
+import filesize from 'rollup-plugin-filesize'
 import modulesMaps from './modules.json'
 import path from 'path'
 
@@ -8,6 +10,13 @@ const name = 'fe-utils'
 const file = (type = 'min') => path.resolve(__dirname, `./dist/${name}.${type}.js`)
 
 const plugins = [
+  commonjs({
+    include: [
+      'node_modules/**',
+      'node_modules/**/*',
+      'dist/**/*'
+    ]
+  }),
   nodeResolve({
     jsnext: true,
     main: true,
@@ -16,13 +25,8 @@ const plugins = [
   typescript({
     tsconfig: 'tsconfig.json'
   }),
-  commonjs({
-    include: [
-      'node_modules/**',
-      'node_modules/**/*',
-      'dist/**/*'
-    ]
-  })
+  progress(),
+  filesize()
 ]
 const bundleConfig = {
   input: 'src/index.ts',

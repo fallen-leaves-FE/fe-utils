@@ -8,7 +8,7 @@ export interface ObjectTypes <T = any> {
  * @param name 要获取的参数名称, 非必传
  * @returns 返回值，如果name不为空则返回name的值，否则返回一个包含所有参数键值对的对象
  */
-export declare const getUrlParams: (url: string = window.location.href, name?: string) => string | ObjectTypes<string>
+export declare const getUrlParams: (url: string, name?: string) => string | ObjectTypes<string>
 
 /**
  * @description 格式化 queryString 为对象
@@ -30,7 +30,7 @@ export declare const stringifyQuery: (query: ObjectTypes = {}, needEncodeURIComp
  * @param keys 要删除的query参数，例如：deleteUrlParams('name') 或者 deleteUrlParams(['name', 'age'])
  * @returns 返回删除目标query参数后的字符串
  */
-export declare const deleteUrlParams: (url: string = window.location.href, keys: string[] | string = []) => string
+export declare const deleteUrlParams: (url: string, keys: string[] | string = []) => string
 
 /**
  * @description 时间格式化函数
@@ -293,3 +293,17 @@ export interface RegexpCollection {
 }
 
 export declare const RegCollection: RegexpCollection
+
+/**
+ * @description 16进制颜色转rgb格式
+ * @param hex 16进制颜色字符串，例如：#00aaff, 00aaff
+ * @returns 返回颜色值 例如：'rgb(0, 170, 255)'
+ */
+export declare const hexToRGB: (hex: string) => string
+
+/**
+ * @description rgb转hex
+ * @param args rgb格式的color，RGBToHex(0, 170, 255) 或者 RGBToHex('rgb(0, 170, 255)')
+ * @returns hex格式的color字符串，'#00aaff'
+ */
+export declare const RGBToHex: (...args: Array<string | number>) => string

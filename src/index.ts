@@ -33,6 +33,10 @@ import isEmpty from './object/isEmpty'
 // string
 import urlToLink from './string/urlToLink'
 
+// color
+import RGBToHex from './color/RGBToHex'
+import hexToRGB from './color/hexToRGB'
+
 export {
   // cookie
   setCookie,
@@ -60,7 +64,10 @@ export {
   deepClone,
   isEmpty,
   // string
-  urlToLink
+  urlToLink,
+  // color
+  RGBToHex,
+  hexToRGB
 }
 
 export default {
@@ -90,5 +97,8 @@ export default {
   deepClone,
   isEmpty,
   // string
-  urlToLink
+  urlToLink,
+  // color
+  RGBToHex,
+  hexToRGB
 }
