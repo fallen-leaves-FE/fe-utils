@@ -30,7 +30,7 @@ export declare const stringifyQuery: (query: ObjectTypes, needEncodeURIComponent
  * @param keys 要删除的query参数，例如：deleteUrlParams('name') 或者 deleteUrlParams(['name', 'age'])
  * @returns 返回删除目标query参数后的字符串
  */
-export declare const deleteUrlParams: (url: string, keys: string[] | string = []) => string
+export declare const deleteUrlParams: (url: string, keys: string[] | string) => string
 
 /**
  * @description 时间格式化函数
@@ -156,7 +156,7 @@ export declare const setCookie: (
     expirse,
     domain,
     path
-  }:SetCookieOpt = {}
+  }?:SetCookieOpt
 ) => void
 
 /**
