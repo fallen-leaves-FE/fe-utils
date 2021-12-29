@@ -22,7 +22,7 @@ export declare const parseQuery: (queryString: string) => ObjectTypes<string>
  * @param query query对象 例如：{ name: 'Bob', age: 24 }
  * @returns queryString 例如：'name=Bob&age=24'
  */
-export declare const stringifyQuery: (query: ObjectTypes = {}, needEncodeURIComponent = true) => string
+export declare const stringifyQuery: (query: ObjectTypes, needEncodeURIComponent?: boolean) => string
 
 /**
  * @description 删除url中指定名称的query参数
@@ -45,7 +45,7 @@ export declare const formatFixedDate: (date: Date | number, fmt: string) => stri
  * @param  {Date} startTime 时间对象或者时间戳
  * @returns {String} 例如 '刚刚'，'3分钟前'，'1小时前'
  */
-export declare const formatPassTime: (startTime: Date | number = new Date()) => string
+export declare const formatPassTime: (startTime: Date | number) => string
 
 /**
  * @description 字符串中的url替换为<a>标签
@@ -53,7 +53,7 @@ export declare const formatPassTime: (startTime: Date | number = new Date()) => 
  * @param className <a>标签的class名称
  * @returns {String} 替换后的html字符串
  */
-export declare const urlToLink: (url: string, className = '') => string
+export declare const urlToLink: (url: string, className?: string) => string
 
 /**
  * @description 深拷贝
@@ -82,7 +82,7 @@ export declare const digitUppercase: (num: number) => string
  * @param {Number} fixed 浮点数精度
  * @returns {String} 返回值
  */
-export declare const fixedThousandsNumber: (num: number | string, fixed = 0) => string
+export declare const fixedThousandsNumber: (num: number | string, fixed?: number) => string
 
 /**
  * @description 格式化文件大小
@@ -97,7 +97,7 @@ export declare const formatFileFize: (size: number) => string
  * @param wait 延迟执行毫秒数
  * @param immediate true 表立即执行，false 表非立即执行
  */
-export declare function debounce (fn: Function, wait: number, immediate = false): Function
+export declare function debounce (fn: Function, wait: number, immediate?: boolean): Function
 
 /**
  * @description 节流函数

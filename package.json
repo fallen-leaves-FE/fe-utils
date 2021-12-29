@@ -1,10 +1,16 @@
 {
 	"name": "@fallen_leaves/fe-utils",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "工具函数库",
 	"main": "dist/fe-utils.umd.js",
 	"module": "dist/fe-utils.esm.js",
 	"types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/fe-utils.umd.js",
+      "import": "./dist/fe-utils.esm.js"
+    }
+  },
 	"files": [
 		"dist",
 		"src",

@@ -28,6 +28,9 @@
 
 ## API文档
 
+### Color
+- [hexToRGB](src/color/hexToRGB.ts)&emsp; 16进制颜色值转rgb格式
+- [RGBToHex](src/color/RGBToHex.ts)&emsp; 16进制颜色值转rgb格式
 ### Cookie
 - [setCookie](src/cookie/setCookie.ts)&emsp; 添加cookie
 - [getCookie](src/cookie/getCookie.ts)&emsp; 获取cookie
@@ -37,7 +40,8 @@
 - [getExplore](src/device/getExplore.ts)&emsp; 获取浏览器型号和版本
 - [getOS](src/device/getOS.ts)&emsp; 获取操作系统类型
 - [versionCompare](src/device/versionCompare.ts)&emsp; 版本号比较
-
+### Event
+- [useFullscreen](src/event/useFullscreen.ts)&emsp; 全屏方法及事件监听
 ### Function
 - [debounce](src/function/debounce.ts)&emsp; 防抖函数
 - [throttle](src/function/throttle.ts)&emsp; 节流函数
