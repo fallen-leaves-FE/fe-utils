@@ -2,9 +2,7 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['ts', 'js', 'json'],
-  transform: {
-    '^.+\\.jsx?$': '<rootDir>/node_modules/babel-jest'
-  },
+  transform: {},
   snapshotSerializers: [],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'

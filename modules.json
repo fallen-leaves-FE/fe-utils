@@ -30,5 +30,7 @@
   "urlToLink": "src/string/urlToLink.ts",
 
   "RGBToHex": "src/color/RGBToHex.ts",
-  "hexToRGB": "src/color/hexToRGB.ts"
+  "hexToRGB": "src/color/hexToRGB.ts",
+
+  "useFullscreen": "src/dom/useFullscreen.ts"
 }

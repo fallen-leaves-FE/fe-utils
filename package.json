@@ -5,12 +5,12 @@
 	"main": "dist/fe-utils.umd.js",
 	"module": "dist/fe-utils.esm.js",
 	"types": "types/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/fe-utils.umd.js",
-      "import": "./dist/fe-utils.esm.js"
-    }
-  },
+	"exports": {
+		".": {
+			"require": "./dist/fe-utils.umd.js",
+			"import": "./dist/fe-utils.esm.js"
+		}
+	},
 	"files": [
 		"dist",
 		"src",
@@ -42,18 +42,17 @@
 	},
 	"license": "ISC",
 	"devDependencies": {
+		"@rollup/plugin-commonjs": "^21.0.1",
 		"@rollup/plugin-node-resolve": "^13.0.0",
 		"@types/jest": "^27.0.1",
 		"@typescript-eslint/eslint-plugin": "^4.25.0",
 		"@typescript-eslint/parser": "^4.25.0",
-		"babel-jest": "^27.0.6",
 		"eslint": "^7.27.0",
 		"jest": "^27.0.6",
 		"jest-transform-stub": "^2.0.0",
 		"pre-commit": "^1.2.2",
 		"rimraf": "^3.0.2",
 		"rollup": "^2.47.0",
-		"rollup-plugin-commonjs": "^10.1.0",
 		"rollup-plugin-copy": "^3.4.0",
 		"rollup-plugin-filesize": "^9.1.1",
 		"rollup-plugin-progress": "^1.1.2",

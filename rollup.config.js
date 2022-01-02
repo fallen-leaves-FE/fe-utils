@@ -1,13 +1,13 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
+import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
 import progress from 'rollup-plugin-progress'
 import filesize from 'rollup-plugin-filesize'
 import modulesMaps from './modules.json'
 import path from 'path'
+import { name as pkgName, module as esmBundle, main as umdBundle } from './package.json'
 
-const name = 'fe-utils'
-const file = (type = 'min') => path.resolve(__dirname, `./dist/${name}.${type}.js`)
+const name = pkgName.split('/').pop()
 
 const plugins = [
   commonjs({
@@ -32,30 +32,34 @@ const bundleConfig = {
   input: 'src/index.ts',
   output: [{
     name,
-    file: file('esm'),
+    file: esmBundle,
     format: 'es',
     exports: 'auto'
   },
   {
     name,
-    file: file('umd'),
+    file: umdBundle,
     format: 'umd',
     exports: 'named'
   }],
   plugins
 }
-const modulesConfig = {
-  input: modulesMaps,
-  output: {
-    name: 'modulesBundle',
-    dir: path.resolve(__dirname, 'dist/modules'),
-    format: 'es',
-    exports: 'auto'
-  },
-  plugins
-}
+const modulesConfig = (function () {
+  return Object.entries(modulesMaps).map(([name, input]) => {
+    return {
+      input,
+      output: {
+        name,
+        file: path.resolve(__dirname, `./dist/modules/${name}.js`),
+        format: 'es',
+        exports: 'auto'
+      },
+      plugins
+    }
+  })
+}())
 
 export default [
   bundleConfig,
-  modulesConfig
+  ...modulesConfig
 ]

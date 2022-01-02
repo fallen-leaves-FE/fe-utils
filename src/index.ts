@@ -37,8 +37,8 @@ import urlToLink from './string/urlToLink'
 import RGBToHex from './color/RGBToHex'
 import hexToRGB from './color/hexToRGB'
 
-// Event
-import useFullscreen from './event/useFullscreen'
+// Dom
+import useFullscreen from './dom/useFullscreen'
 
 export {
   // cookie
@@ -71,7 +71,7 @@ export {
   // color
   RGBToHex,
   hexToRGB,
-  // event
+  // Dom
   useFullscreen
 }
 
@@ -106,6 +106,6 @@ export default {
   // color
   RGBToHex,
   hexToRGB,
-  // event
+  // Dom
   useFullscreen
 }
