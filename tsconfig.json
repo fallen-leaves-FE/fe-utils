@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "ESNext",
     "strict": true,
     "jsx": "preserve",
@@ -10,6 +10,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "removeComments": false,
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors":true,
     "downlevelIteration": true,

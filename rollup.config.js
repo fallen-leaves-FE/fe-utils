@@ -1,6 +1,6 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from 'rollup-plugin-typescript2'
+import esbuild from 'rollup-plugin-esbuild'
 import progress from 'rollup-plugin-progress'
 import filesize from 'rollup-plugin-filesize'
 import modulesMaps from './modules.json'
@@ -22,7 +22,7 @@ const plugins = [
     main: true,
     extensions: ['.js', '.ts', '.json']
   }),
-  typescript({
+  esbuild({
     tsconfig: 'tsconfig.json'
   }),
   progress(),
