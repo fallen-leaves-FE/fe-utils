@@ -1,8 +1,9 @@
-module.exports = {
-  preset: 'ts-jest',
+export default {
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['ts', 'js', 'json'],
-  transform: {},
+  transform: {
+    '^.+\\.tsx?$': 'esbuild-jest'
+  },
   snapshotSerializers: [],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
