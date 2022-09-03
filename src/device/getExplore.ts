@@ -1,5 +1,3 @@
-import { ExploreProps, ExploreName } from './../../types/index.d'
-
 /**
  * @description 获取浏览器平台及版本
  * @returns {Object} 返回浏览器平台和版本

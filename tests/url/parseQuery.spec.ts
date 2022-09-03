@@ -20,7 +20,7 @@ describe('parseQuery - 格式化queryString为对象', () => {
 	test('重名参数测试', () => {
 		const obj = parseQuery('?name=Bob&age=24&name=Jim')
 		expect(obj).toEqual({
-			name: ['Bob', 'Jim'],
+			name: 'Jim',
 			age: '24'
 		})
 	})

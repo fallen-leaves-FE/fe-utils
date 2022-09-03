@@ -56,7 +56,7 @@
 - [isEmpty](src/object/isEmpty.ts)&emsp; 空对象判断
 
 ### Regexp
-- [RegCollection](src/regexp/index.ts)&emsp; 常用正则判断函数
+- [RegCollections](src/regexp/index.ts)&emsp; 常用正则判断函数
   - .isUrl(url)&emsp; 判段目标字符串是否为url
   - .isPhoneNumber(phoneNumber)&emsp; 判段目标字符串是否为手机号
   - .isEmail(email)&emsp; 判段目标字符串是否为邮箱

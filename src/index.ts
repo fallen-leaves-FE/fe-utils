@@ -20,7 +20,7 @@ import getExplore from './device/getExplore'
 import versionCompare from './device/versionCompare'
 
 // regexp
-import RegCollection from './regexp'
+import RegCollections from './regexp'
 
 // time
 import formatFixedDate from './time/formatFixedDate'
@@ -59,7 +59,7 @@ export {
   getExplore,
   versionCompare,
   // regexp
-  RegCollection,
+  RegCollections,
   // time
   formatFixedDate,
   formatPassTime,
@@ -94,7 +94,7 @@ export default {
   getExplore,
   versionCompare,
   // regexp
-  RegCollection,
+  RegCollections,
   // time
   formatFixedDate,
   formatPassTime,

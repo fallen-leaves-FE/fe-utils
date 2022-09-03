@@ -1,10 +1,9 @@
-import { ObjectTypes } from './../../types/index.d'
 /**
  * @description 格式化对象为queryString
  * @param query query对象 例如：{ name: 'Bob', age: 24 }
  * @returns queryString 例如：'name=Bob&age=24'
  */
-const stringifyQuery = (query: ObjectTypes = {}, needEncodeURIComponent = true): string => {
+const stringifyQuery = (query: Record<string, string> = {}, needEncodeURIComponent = true): string => {
   if (!query || typeof query !== 'object' || Array.isArray(query)) {
     return ''
   }

@@ -5,7 +5,7 @@
  * @param immediate true 表立即执行，false 表非立即执行
  */
 function debounce (fn: Function, wait: number, immediate = false): Function {
-  let timeout: number | null
+  let timeout: NodeJS.Timeout | null
 
   return function (...args:any[]) {
     const context: any = this

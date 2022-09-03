@@ -1,13 +1,12 @@
-import { ObjectTypes } from './../../types/index.d'
 /**
  * @name getCookie
  * @description 获取cookie
  * @param {String} name cookie名称
  * @returns {Object|String} 返回值name的cookie值，若name为空则返回所有cookie
  */
-const getCookie = (name?: string): ObjectTypes<string> | string =>  {
+const getCookie = (name?: string): Record<string, string> | string =>  {
   const keyValueList: string[] = document.cookie.split('; ')
-  const json: ObjectTypes<string> = {}
+  const json: Record<string, string> = {}
 
   keyValueList.forEach(item => {
     const [key, value] = item.split('=')

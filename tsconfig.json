@@ -7,7 +7,6 @@
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "removeComments": false,
@@ -15,10 +14,10 @@
     "suppressImplicitAnyIndexErrors":true,
     "downlevelIteration": true,
     "noImplicitThis": false,
+    "declaration": false,
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": ".",
-    "types": ["jest"],
     "typeRoots": [
       "./node_modules/@types",
       "./types"
@@ -27,6 +26,7 @@
       "es5",
       "es2015",
       "esnext",
+      "ES7",
       "dom",
       "dom.iterable",
       "scripthost"

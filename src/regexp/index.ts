@@ -1,4 +1,3 @@
-import { RegexpCollection } from './../../types/index.d'
 class RegCollections implements RegexpCollection {
   readonly ua = navigator.userAgent
   // url地址

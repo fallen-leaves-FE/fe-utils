@@ -1,4 +1,3 @@
-import { OSType } from '../../types/index.d'
 /**
  * @description 获取系统类型
  * @returns 系统标识 'ios' | 'Android' | 'WindowsPhone' | 'MacOS' | 'Windows' | 'Linux' | 'Unkonwn'
