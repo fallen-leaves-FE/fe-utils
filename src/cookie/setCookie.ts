@@ -1,3 +1,4 @@
+import { SetCookieOpt } from '../../types/index.d'
 /**
  * @name setCookie
  * @description 设置cookie
@@ -14,7 +15,7 @@ const setCookie = (
     expirse,
     domain,
     path
-  }:SetCookieOpt = {}
+  }: SetCookieOpt = {}
 ): void => {
   let stringifiedAttributes = ''
   // 过期时间
