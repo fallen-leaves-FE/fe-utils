@@ -42,6 +42,7 @@
 - [versionCompare](src/device/versionCompare.ts)&emsp; 版本号比较
 ### Dom
 - [useFullscreen](src/dom/useFullscreen.ts)&emsp; 全屏方法及事件监听
+- [useWatermark](src/dom/useWatermark.ts)&emsp; 为指定元素添加水印
 ### Function
 - [debounce](src/function/debounce.ts)&emsp; 防抖函数
 - [throttle](src/function/throttle.ts)&emsp; 节流函数

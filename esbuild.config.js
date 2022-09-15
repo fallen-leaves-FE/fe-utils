@@ -31,7 +31,7 @@ import moduleMaps from './modules.js'
   })
 
   await build({
-    entryPoints: Object.values(moduleMaps),
+    entryPoints: moduleMaps,
     bundle: true,
     format: 'esm',
     outdir: 'dist/modules',

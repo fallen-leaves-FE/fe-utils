@@ -6,7 +6,7 @@ import stringifyQuery from './stringifyQuery'
  * @param keys 要删除的query参数，例如：deleteUrlParams('name') 或者 deleteUrlParams(['name', 'age'])
  * @returns 返回删除目标query参数后的字符串
  */
-const deleteUrlParams = (url: string = window.location.href, keys: string[] | string = []): string => {
+const deleteUrlParams = (url: string = window?.location.href, keys: string[] | string = []): string => {
   const [hostAndPath, queryString = ''] = url.split('?')
   const queryObj = parseQuery(queryString)
 

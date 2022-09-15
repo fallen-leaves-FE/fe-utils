@@ -39,6 +39,7 @@ import hexToRGB from './color/hexToRGB'
 
 // Dom
 import useFullscreen from './dom/useFullscreen'
+import useWatermark from './dom/useWatermark'
 
 export {
   // cookie
@@ -72,7 +73,8 @@ export {
   RGBToHex,
   hexToRGB,
   // Dom
-  useFullscreen
+  useFullscreen,
+  useWatermark
 }
 
 export default {
@@ -107,5 +109,6 @@ export default {
   RGBToHex,
   hexToRGB,
   // Dom
-  useFullscreen
+  useFullscreen,
+  useWatermark
 }

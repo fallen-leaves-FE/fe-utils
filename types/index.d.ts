@@ -303,3 +303,60 @@ export declare const hexToRGB: (hex: string) => string
  * @returns hex格式的color字符串，'#00aaff'
  */
 export declare const RGBToHex: (...args: Array<string | number>) => string
+
+export type WatermarkOptions = {
+  /**
+   * @description 水印文案, 必填
+   */
+  text: string
+  /**
+   * @description 要添加水印的dom元素
+   */
+  el?: HTMLElement
+  /**
+   * @description 画布宽度
+   * @default 300
+   */
+  canvasWidth?: number
+  /**
+   * @description 画布高度
+   * @default 150
+   */
+  canvasHeight?: number
+  /**
+   * @description 字体相关
+   * @default '16px normal'
+   */
+  font?: string
+  /**
+   * @description 文本颜色
+   * @default 'rgba(180, 180, 180, .3)'
+   */
+  color?: string
+  /**
+   * @description 文本水平对其方式
+   * @default 'left'
+   */
+  textAlign?: 'center' | 'end' | 'left' | 'right' | 'start'
+  /**
+   * @description 文本竖直对其方式
+   * @default 'left'
+   */
+  textBaseline?: 'alphabetic' | 'bottom' | 'hanging' | 'ideographic' | 'middle' | 'top'
+  /**
+   * @description 画布旋转角度
+   * @default -20
+   */
+  rotate?: number,
+  /**
+   * @description 画布位移量 [x, y]
+   * @default [0,0]
+   */
+  translate?: [number, number]
+}
+/**
+ * @description 指定元素添加水印
+ * @param options 配置参数
+ * @returns 水印图片base64URL
+ */
+export declare const useWatermark: (opts: WatermarkOptions) => string

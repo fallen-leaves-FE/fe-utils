@@ -32,5 +32,6 @@ export default {
   'RGBToHex': 'src/color/RGBToHex.ts',
   'hexToRGB': 'src/color/hexToRGB.ts',
 
-  'useFullscreen': 'src/dom/useFullscreen.ts'
+  'useFullscreen': 'src/dom/useFullscreen.ts',
+  'useWatermark': 'src/dom/useWatermark.ts'
 }
